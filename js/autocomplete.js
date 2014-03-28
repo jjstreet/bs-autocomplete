@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: autocomplete.js v1.0.0
+ * Bootstrap: autocomplete.js v1.0.3
  * ========================================================================
  * A simple autocomplete widget based heavily on jQuery autocomplete
  *
@@ -65,6 +65,9 @@
     };
     
     Autocomplete.prototype.init = function () {
+        this.$element.parent()
+            .addClass('dropdown');
+            
         this.$element
                 .addClass('autocomplete-input')
                 .attr('autocomplete', 'off');
